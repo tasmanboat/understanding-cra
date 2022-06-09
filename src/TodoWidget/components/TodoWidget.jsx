@@ -6,10 +6,7 @@ import AddBar from './AddBar';
 
 export default function TodoWidget() {
   return (
-    <div style={{
-      backgroundColor: '#ebe1e1',
-      padding: '1em',
-    }}>
+    <div className='bg-palebrown p-4'>
       <h2 className='text-4xl font-bold py-4'>TodoWidget</h2>
       <FilterProvider>
         <TodoProvider>

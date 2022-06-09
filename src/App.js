@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
-// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom;
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout';
 import Screen from './components/Screen';

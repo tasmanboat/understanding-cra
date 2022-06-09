@@ -5,7 +5,7 @@ function Nav() {
 // const Nav = () => {
   return (
     <div
-      className="nav"
+      className='nav'
       style={{
         minHeight: '3em',
         padding: '1em',

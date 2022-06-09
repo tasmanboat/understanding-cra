@@ -9,7 +9,7 @@ function Clock() {
   }
   useEffect(() => {
     savedCallback.current = callback;
-  }, [callback]);
+  }, []);
 
   useEffect(() => {
     function tick() {
@@ -21,7 +21,7 @@ function Clock() {
 
   return (
     <div>
-      <h2>It is {date.toLocaleTimeString()}</h2>
+      <h2>{date.toLocaleTimeString()}</h2>
     </div>
   );
 

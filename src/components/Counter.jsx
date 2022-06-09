@@ -22,7 +22,7 @@ function Counter({ initialCount }) {
         <button className='btn btn-sm' onClick={() => setCount(prevCount => prevCount + step)}>+</button>
       </div>
       <div>
-        <label htmlFor='step'>
+        <label>
           Step:
           <input type='text' value={step} onChange={handleStepUpdate} />
         </label>
