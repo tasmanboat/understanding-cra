@@ -47,13 +47,13 @@ function Fetcher() {
 
   function takeLongTime() {
     return new Promise((resolve) => {
-      setTimeout(() => resolve('long_time_value'), 4000);
+      setTimeout(() => resolve('long_time_value'), 2000);
     });
   }
 
   return (
-    <div className='fetcher min-h-[20em] relative'>
-      <h4 className='text-5xl font-bold pb-4'>{serverState.data ?? serverState.error}</h4>
+    <div className='fetcher min-h-[20em] bg-slate-300 relative'>
+      <h4 className='text-5xl font-bold pb-4'>{serverState.data ?? serverState.error ?? 'loading ...'}</h4>
       <button className='btn btn-ghost absolute right-2 bottom-2' disabled={disabled} onClick={handleFetch} >⚡️</button>
     </div>
   );
