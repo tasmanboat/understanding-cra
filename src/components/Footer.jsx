@@ -1,6 +1,6 @@
 export default () => (
   <div
-    className='footer'
+    className='footer rounded-b-xl'
     style={{
       backgroundColor: '#e82',
       padding: '2em',
