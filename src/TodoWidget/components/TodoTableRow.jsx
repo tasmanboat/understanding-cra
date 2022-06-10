@@ -21,7 +21,7 @@ export default function TodoTableRow({ todo }) {
     <tr>
       <td className='id w-2'>{todo.id}</td>
       <td className='title w-24'><span contentEditable='true' onBlur={onBlurEditable} suppressContentEditableWarning={true}>{title}</span></td>
-      <td className='isCompleted w-4'>
+      <td className='isCompleted w-1'>
         <input
           type='checkbox'
           name='isCompleted'

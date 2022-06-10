@@ -24,12 +24,12 @@ export default function TodoTable() {
   }
 
   return (
-    <table className="table table-fixed w-full">
+    <table className='table-fixed w-full'>
       <thead>
         <tr>
           <th className='id w-2'>Id</th>
           <th className='title w-24'>Title</th>
-          <th className='isCompleted w-4'>✓</th>
+          <th className='isCompleted w-1'>✓</th>
         </tr>
       </thead>
       <tbody>
