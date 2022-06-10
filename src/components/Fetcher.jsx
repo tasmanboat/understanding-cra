@@ -10,8 +10,10 @@ function Fetcher() {
     async function fetchData() {
       try {
         setDisabled(true);
-        const res = await axios.get('https://api.icndb.com/jokes/random');
-        const joke = decodeHtml(res?.data?.value?.joke);
+        // const res = await axios.get('https://api.icndb.com/jokes/random');
+        // const joke = decodeHtml(res?.data?.value?.joke);
+        const res = await axios.get('https://api.chucknorris.io/jokes/random');
+        const joke = decodeHtml(res?.data?.value);
         if (!ignore) { setServerState({ error: null, data: joke }); setDisabled(false); }
       } catch (e) {
         console.log(`Fetcher error: ${e.message}`);
@@ -28,8 +30,8 @@ function Fetcher() {
     try {
       setDisabled(true);
       // await takeLongTime();
-      const res = await axios.get('https://api.icndb.com/jokes/random');
-      const joke = decodeHtml(res?.data?.value?.joke);
+      const res = await axios.get('https://api.chucknorris.io/jokes/random');
+      const joke = decodeHtml(res?.data?.value);
       setServerState({ error: null, data: joke });
       setDisabled(false);
     } catch(e) {
