@@ -37,9 +37,15 @@ function Stopwatch() {
     setIsRunning(true)
   }
 
+  function handleEnd() {
+    clearInterval(intervalRef.current);
+    setTimer(0);
+    setIsRunning(false);
+  }
+
   return (
-    <div className='min-h-[20em]'>
-      <div className='grid px-4 gap-4'>
+    <div className='stopwatch min-h-[20em] p-4 bg-slate-300'>
+      <div className='grid gap-4'>
         <h4 className='text-5xl font-bold'>{timer.toString().toHHMMSSss()}</h4>
 
         <input type='button' value='start/resume' onClick={handleResume} disabled={isRunning} className='btn btn-outline' />
@@ -51,8 +57,11 @@ function Stopwatch() {
           }} />
         <input type='button' value='clear log' className='btn btn-outline'
           onClick={() => setLog([])} />
+        <input type='button' value='end' className='btn btn-outline'
+          onClick={handleEnd} />
 
       </div>
+      <h4 className='my-4'>logs</h4>
       <ul>
         {log.length > 0 && log.map((log, i) => (
           <li key={`${log}${i}`}>{log}</li>
