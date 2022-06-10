@@ -19,7 +19,7 @@ export default function TodoTableRow({ todo }) {
 
   return (
     <tr>
-      <td className='id w-2'>{todo.id}</td>
+      <td className='id w-2 text-center'>{todo.id}</td>
       <td className='title w-24'><span contentEditable='true' onBlur={onBlurEditable} suppressContentEditableWarning={true}>{title}</span></td>
       <td className='isCompleted w-1'>
         <input

@@ -22,10 +22,12 @@ export default function AddBar() {
         (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const _todo = { id: -1, title: title, isCompleted: isCompleted };
-          dispatch({ type: 'addRecord', payload: _todo });
-          setTitle('');
-          setIsCompleted(false);
+          if (title.trim()) {
+            const _todo = { id: -1, title: title, isCompleted: isCompleted };
+            dispatch({ type: 'addRecord', payload: _todo });
+            setTitle('');
+            setIsCompleted(false);
+          }
         }
       } className='btn btn-ghost' />
 
