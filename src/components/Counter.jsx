@@ -14,7 +14,7 @@ function Counter({ initialCount }) {
   return (
     <div style={{
       // minHeight: '20em',
-    }} className={`${bgc} py-4 px-2 min-h-[20em]`}>
+    }} className={`${bgc} p-4 min-h-[20em]`}>
       <h2 className='text-5xl font-bold'>Count: {count}</h2>
       <div className='my-2'>
         <button className='btn btn-sm' onClick={() => { setCount(initialCount); setStep(1); }}>Reset</button>
